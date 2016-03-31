@@ -13,8 +13,9 @@
 
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
-      <feature name="BlurAppPrivacyScreen">
-        <param name="android-package" value="org.mobiquityinc.privacyscreen.BlurAppPrivacyScreen" />
+      <feature name="BlurPrivacyScreen">
+        <param name="android-package" value="org.mobiquityinc.privacyscreen.BlurPrivacyScreen" />
+        <param name="onload" value="true" />
       </feature>
     </config-file>
 
