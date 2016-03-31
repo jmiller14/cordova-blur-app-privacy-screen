@@ -10,4 +10,14 @@
 
     <source-file src="src/ios/BlurPrivacyScreen.m" />
   </platform>
+
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="BlurAppPrivacyScreen">
+        <param name="android-package" value="org.mobiquityinc.privacyscreen.BlurAppPrivacyScreen" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/BlurPrivacyScreen.java" target-dir="src/org/mobiquityinc/privacyscreen" />
+  </platform>
 </plugin>
