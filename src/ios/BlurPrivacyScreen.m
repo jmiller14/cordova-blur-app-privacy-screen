@@ -27,20 +27,14 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    NSLog(@"Hiding blur");
-    // grab a reference to our custom blur view
-    UIView *blurEffectView = [self.window viewWithTag:1234];
-
-    // fade away colour view from main view
-    [UIView animateWithDuration:0.5 animations:^{
-        blurEffectView.alpha = 0;
-    } completion:^(BOOL finished) {
-        // remove when finished fading
-        [blurEffectView removeFromSuperview];
-    }];
+    [self hideBlur];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    [self hideBlur];
+}
+
+- (void)hideBlur {
     NSLog(@"Hiding blur");
     // grab a reference to our custom blur view
     UIView *blurEffectView = [self.window viewWithTag:1234];
